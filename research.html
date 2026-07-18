@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Research — Nidita Roy</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Nidita Roy</title>
+  <meta name="description" content="Research by Nidita Roy on continual learning, learnable CT windowing, abdominal trauma detection, multimodal learning, and medical image analysis.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="nav-row">
     <a class="brand" href="index.html">Nidita Roy</a>
-    <nav class="primary">
+    <nav class="primary" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="research.html" aria-current="page">Research</a>
       <a href="publications.html">Publications</a>
@@ -22,158 +23,127 @@
   </div>
 </header>
 
-<main class="wrap">
-
-  <section class="hero" style="padding-top:48px;">
+<main id="main-content" class="wrap">
+  <section class="hero compact">
     <div class="scan-grid" aria-hidden="true"></div>
     <span class="eyebrow">Medical Computer Vision Lab</span>
-    <h1 style="font-size:2.2rem;">Research</h1>
-    <p class="lede">My research develops deep learning methods that remain reliable as medical imaging protocols, scanners, and patient populations shift over time — with supporting work in multimodal fusion, segmentation, and clinical data integration.</p>
+    <h1>Research</h1>
+    <p class="lede">My work asks a deployment-oriented question: when continual-learning systems fail on real medical images, is catastrophic forgetting the primary problem, or are preprocessing, representation, labeling, and task design limiting the model before forgetting can even be meaningfully assessed?</p>
     <div class="ramp r-a"></div>
   </section>
 
-  <section id="hu-adaptation">
-    <div class="work-card">
-      <div class="kicker">
-        <svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h4"/><path d="M14 3v6h6"/><path d="M16.5 14.5l3 3L14 23l-3.3.5.5-3.3z"/></svg>
-        <span>Manuscript</span>
-      </div>
-      <span class="status review">Under review · Manuscript submitted 2026</span>
-      <h3>Learning to Window: Context-Aware HU Adaptation for Continual Trauma Injury Detection in CT Scans</h3>
-      <div class="meta">Lead author · Medical Computer Vision Lab, University of Victoria · supervised by Dr. Ashery Mbilinyi</div>
-      <dl>
-        <dt>Motivation</dt>
-        <dd>Fixed windowing and static models degrade when scanner protocols or patient demographics shift — a real constraint in trauma radiology.</dd>
-        <dt>Approach</dt>
-        <dd>A learnable windowing technique combined with context-aware Hounsfield Unit adaptation, so models can adjust to new imaging conditions without full retraining.</dd>
-        <dt>Dataset</dt>
-        <dd>To be announced following publication.</dd>
-        <dt>Outcome</dt>
-        <dd>In progress — manuscript under review, results not yet public.</dd>
-      </dl>
-      <div class="links"><a href="#">Paper (pending)</a> <a href="#">Code (pending)</a></div>
+  <section>
+    <div class="section-head">
+      <div class="title-group"><span class="section-icon">01</span><h2>MSc thesis direction</h2></div>
     </div>
+    <article class="work-card featured">
+      <div class="kicker">Preliminary thesis title</div>
+      <h3>Continual Learning for Abdominal Trauma Detection in CT: A Task-Incremental Study of Forgetting, Windowing, and Learnability</h3>
+      <p>The thesis develops and evaluates a staged diagnostic framework for continual medical-imaging systems. Rather than only tuning regularization or replay hyperparameters, the work tests whether the data representation and task granularity are sufficiently learnable for continual-learning comparisons to be valid.</p>
+      <dl>
+        <dt>Core methods</dt><dd>Sequential fine-tuning, Elastic Weight Consolidation (EWC), Replay, and EWC+Replay.</dd>
+        <dt>Testbed</dt><dd>Abdominal CT trauma detection across bowel, extravasation, kidney, spleen, and liver injury tasks.</dd>
+        <dt>Diagnostic lens</dt><dd>Average AUROC, transfer, forgetting, representation quality, label granularity, and patient-level aggregation.</dd>
+        <dt>Supervision</dt><dd><a href="https://www.uvic.ca/ecs/computerscience/people/faculty/profiles/mbilinyi-ashery.php" target="_blank" rel="noopener">Dr. Ashery Mbilinyi</a>; committee member <a href="https://www.uvic.ca/ecs/computerscience/people/faculty/profiles/champati-jaya.php" target="_blank" rel="noopener">Dr. Jaya Prakash Champati</a>.</dd>
+      </dl>
+    </article>
   </section>
 
-  <section id="forgetting-study" style="padding-top:0;">
-    <div class="work-card">
-      <div class="kicker">
-        <svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h4"/><path d="M14 3v6h6"/><path d="M16.5 14.5l3 3L14 23l-3.3.5.5-3.3z"/></svg>
-        <span>Manuscript</span>
+  <section id="learning-to-window">
+    <article class="work-card featured">
+      <div class="kicker">Lead-author manuscript</div>
+      <span class="status review">Submitted to WACV 2027 · under review</span>
+      <h3>Learning to Window: Context-Aware HU Adaptation for Continual Trauma Injury Detection in CT Scans</h3>
+      <div class="meta">Lead author · MSc thesis research · University of Victoria</div>
+      <p>Clinical CT viewing commonly relies on fixed Hounsfield Unit windows. This project replaces that fixed preprocessing choice with a differentiable module that learns task-specific window parameters jointly with the diagnostic model.</p>
+      <div class="result-strip" aria-label="Reported results from the submitted manuscript">
+        <div><strong>0.770</strong><span>Average AUROC with learnable windowing</span></div>
+        <div><strong>44%</strong><span>Reduction in catastrophic forgetting</span></div>
+        <div><strong>3 / 5</strong><span>Tasks with positive forward transfer</span></div>
       </div>
-      <span class="status review">Under review · Manuscript submitted 2026</span>
+      <dl>
+        <dt>Motivation</dt><dd>Fixed window presets may suppress task-relevant contrast and impose a representation bottleneck before continual learning begins.</dd>
+        <dt>Approach</dt><dd>A differentiable Learning-to-Window module learns per-task CT intensity mappings within a continual-learning pipeline.</dd>
+        <dt>Baseline</dt><dd>Fixed-window continual learning achieved an average AUROC of 0.540 in the reported experiments.</dd>
+        <dt>Outcome</dt><dd>The submitted manuscript reports an increase to 0.770 average AUROC, lower forgetting, and positive forward transfer on three of five tasks.</dd>
+        <dt>Availability</dt><dd>Paper and implementation links will be added after the review process permits public release.</dd>
+      </dl>
+      <div class="links"><a href="https://wacv.thecvf.com/" target="_blank" rel="noopener">WACV 2027 conference site ↗</a></div>
+    </article>
+  </section>
+
+  <section id="limits-study">
+    <article class="work-card featured">
+      <div class="kicker">Diagnostic study</div>
+      <span class="status progress">Manuscript in preparation · targeting MICAD 2026</span>
       <h3>What Limits Continual Learning for Abdominal-Trauma CT Detection? A Diagnostic Study of Forgetting vs. Representation Bottlenecks</h3>
       <div class="meta">Co-author · Medical Computer Vision Lab, University of Victoria</div>
+      <p>This work studies a related domain-incremental setting where standard continual-learning methods remain near chance. Instead of interpreting every weak result as catastrophic forgetting, the study evaluates whether the representation and coarse patient-level label are themselves preventing the task from being learned.</p>
       <dl>
-        <dt>Research question</dt>
-        <dd>What actually limits continual learning performance in abdominal-trauma CT detection — catastrophic forgetting, or bottlenecks in the learned representation itself?</dd>
-        <dt>My role</dt>
-        <dd>Co-author.</dd>
+        <dt>Benchmarks</dt><dd>Fine-tuning, EWC, Replay, and EWC+Replay under matched training conditions.</dd>
+        <dt>Finding</dt><dd>Weak predictive performance is traced primarily to representation quality and coarse labeling rather than to forgetting alone.</dd>
+        <dt>Reformulation</dt><dd>A patient-level multiple-instance learning formulation is used to align slice-level evidence with patient-level abdominal-trauma labels.</dd>
+        <dt>Contribution</dt><dd>The study offers a diagnostic workflow for deciding whether to improve continual-learning algorithms or first repair the upstream learning problem.</dd>
       </dl>
-      <div class="links"><a href="#">Paper (pending)</a></div>
+      <div class="links"><a href="https://www.micad.org/" target="_blank" rel="noopener">MICAD 2026 conference site ↗</a></div>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <div class="title-group"><span class="section-icon">02</span><h2>Research objectives</h2></div>
+    </div>
+    <div class="grid-2">
+      <article class="card"><h3>Deployment realism</h3><p>Test whether continual-learning approaches remain credible on heterogeneous, low-prevalence medical data rather than only on simplified benchmarks.</p></article>
+      <article class="card"><h3>Method diagnosis</h3><p>Separate forgetting from failures caused by preprocessing, feature quality, label granularity, and insufficient task learnability.</p></article>
+      <article class="card"><h3>Pipeline improvement</h3><p>Develop concrete changes—learnable CT windowing and patient-level multiple-instance learning—instead of only retuning existing methods.</p></article>
+      <article class="card"><h3>Open problems</h3><p>Identify limitations that should shape future research in continual medical imaging, including evaluation under scarce data and limited compute.</p></article>
     </div>
   </section>
 
-  <section id="spinal-disease" style="padding-top:0;">
-    <div class="work-card">
-      <div class="kicker">
-        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></svg>
-        <span>Conference Paper</span>
-      </div>
-      <span class="status published">Accepted · PECCI 2026</span>
-      <h3>Spinal Disease Detection via Deep Multimodal Fusion of X-ray Imagery and Demographic Features</h3>
-      <div class="meta">Lead author · BSc thesis</div>
-      <dl>
-        <dt>Motivation</dt>
-        <dd>Multimodal fusion of imaging and demographic data for identifying spine conditions.</dd>
-        <dt>Approach</dt>
-        <dd>Deep multimodal fusion model across eight spine-condition classes, followed by a segmentation stage.</dd>
-        <dt>Outcome</dt>
-        <dd>High classification accuracy across eight spine conditions.</dd>
-      </dl>
-      <div class="links"><a href="#">Paper (link pending)</a></div>
+  <section>
+    <div class="section-head">
+      <div class="title-group"><span class="section-icon">03</span><h2>Related research experience</h2></div>
+    </div>
+    <div class="grid-2">
+      <article class="card">
+        <span class="status published">Accepted · PECCI 2026</span>
+        <h3>Spinal Disease Detection via Deep Multimodal Fusion</h3>
+        <p>Lead-author BSc thesis work combining X-ray imagery with demographic features to classify eight spine conditions, followed by segmentation.</p>
+        <span class="mono muted">Public paper link pending</span>
+      </article>
+      <article class="card">
+        <span class="status review">Preprint · 2025</span>
+        <h3>Deep Learning for Wound Tissue Segmentation</h3>
+        <p>Comparative evaluation of full-image, patch, and superpixel formulations across a novel six-tissue wound dataset.</p>
+        <a class="card-link" href="https://arxiv.org/abs/2502.10652" target="_blank" rel="noopener">Read on arXiv →</a>
+      </article>
+      <article class="card">
+        <span class="status published">Published · Cancers, 2023</span>
+        <h3>Survival Prediction in Palliative Care</h3>
+        <p>Multimodal modeling of wearable actigraphy and clinical information for survival-outcome prediction.</p>
+        <a class="card-link" href="https://doi.org/10.3390/cancers15082232" target="_blank" rel="noopener">Open article →</a>
+      </article>
+      <article class="card">
+        <span class="status published">Published · ICCIT, 2023</span>
+        <h3>Offensive Bengali Meme Detection</h3>
+        <p>Earlier multimodal work combining image and text models through a weighted ensemble architecture.</p>
+        <a class="card-link" href="https://ieeexplore.ieee.org/document/10441496/" target="_blank" rel="noopener">Open on IEEE Xplore →</a>
+      </article>
     </div>
   </section>
-
-  <section id="wound-segmentation" style="padding-top:0;">
-    <div class="work-card">
-      <div class="kicker">
-        <svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h6"/><path d="M14 3v6h6"/><circle cx="17" cy="17" r="4"/><path d="M17 15.5V17l1 1"/></svg>
-        <span>Preprint</span>
-      </div>
-      <span class="status review">Preprint · arXiv 2502.10652, Feb 2025</span>
-      <h3>Deep Learning for Wound Tissue Segmentation: A Comprehensive Evaluation Using a Novel Dataset</h3>
-      <div class="meta">2nd of 5 authors — Kabir, M.A., Roy, N., Hossain, M.E., Featherston, J., Ahmed, S.</div>
-      <dl>
-        <dt>Research question</dt>
-        <dd>How do patch-based, super-pixel-based, and full segmentation models compare for wound-tissue segmentation?</dd>
-        <dt>Dataset</dt>
-        <dd>147 wound images across six tissue types: slough, granulation, maceration, necrosis, bone, and tendon.</dd>
-        <dt>Approach</dt>
-        <dd>Comparative evaluation including UNet, cGAN-based methods, and FPN+VGG16 across three labelling formats.</dd>
-        <dt>My contribution</dt>
-        <dd>Literature review and coding implementation.</dd>
-      </dl>
-      <div class="links"><a href="https://arxiv.org/abs/2502.10652" target="_blank" rel="noopener">Paper on arXiv →</a></div>
-    </div>
-  </section>
-
-  <section id="palliative-survival" style="padding-top:0;">
-    <div class="work-card">
-      <div class="kicker">
-        <svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 15.5v-10z"/><path d="M4 15.5A2.5 2.5 0 016.5 18H20"/></svg>
-        <span>Journal Article</span>
-      </div>
-      <span class="status published">Published · Cancers, 2023</span>
-      <h3>Deep Learning Prediction Model for Patient Survival Outcomes in Palliative Care Using Actigraphy Data and Clinical Information</h3>
-      <div class="meta">2nd of 8 authors — Huang, Y., Roy, N., Dhar, E., Upadhyay, U., Kabir, M.A., Uddin, M., Tseng, C-L., Syed-Abdul, S.</div>
-      <dl>
-        <dt>Research question</dt>
-        <dd>Can wearable actigraphy data combined with clinical information predict palliative-care survival outcomes better than traditional tools (KPS, PPI)?</dd>
-        <dt>Dataset</dt>
-        <dd>Prospective cohort of palliative-care patients, Taipei Medical University Hospital.</dd>
-        <dt>My contribution</dt>
-        <dd>Statistical analysis; writing — original draft preparation.</dd>
-      </dl>
-      <div class="links"><a href="https://doi.org/10.3390/cancers15082232" target="_blank" rel="noopener">Paper (DOI) →</a></div>
-    </div>
-  </section>
-
-  <section id="bengali-meme" style="padding-top:0;">
-    <div class="work-card">
-      <div class="kicker">
-        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></svg>
-        <span>Conference Paper</span>
-      </div>
-      <span class="status published">Published · 26th ICCIT, 2023</span>
-      <h3>Enhancing Offensive Bengali Social Media Meme Detection: A Weighted Ensemble Architecture</h3>
-      <div class="meta">Dataset creation &amp; modelling</div>
-      <p>Earlier work in multimodal fusion — combining text and image models — that informs my current approach to combining imaging and clinical modalities. Not part of my medical-imaging research line, included here as methodological background.</p>
-      <dl>
-        <dt>Approach</dt>
-        <dd>Weighted ensemble of multimodal (BERT + image classifier) models across a three-level hierarchical classification.</dd>
-        <dt>Dataset</dt>
-        <dd>Multi-modal Offensive Memes Bengali Dataset (MoMBD), 3,662 memes, created for this work.</dd>
-        <dt>Outcome</dt>
-        <dd>Weighted F1-score of 71.84% on fine-grained classification.</dd>
-      </dl>
-      <div class="links"><a href="https://ieeexplore.ieee.org/abstract/document/10441496" target="_blank" rel="noopener">Paper on IEEE Xplore →</a></div>
-    </div>
-  </section>
-
 </main>
 
 <footer class="site-footer">
   <div class="wrap">
-    <span>© 2026 Nidita Roy · Medical Computer Vision Lab, University of Victoria</span>
+    <span>© 2026 Nidita Roy · University of Victoria</span>
     <span class="icon-row">
-      <a class="icon-link" href="mailto:niditaroy@uvic.ca"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email</a>
-      <a class="icon-link" href="https://github.com/Nidita" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 6L3 12l5 6"/><path d="M16 6l5 6-5 6"/></svg>GitHub</a>
-      <a class="icon-link" href="https://linkedin.com/in/nidita-roy-0537b31b0/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 15l6-6"/><path d="M11 6l1-1a3.5 3.5 0 015 5l-1 1"/><path d="M13 18l-1 1a3.5 3.5 0 01-5-5l1-1"/></svg>LinkedIn</a>
-      <a class="icon-link" href="https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M3 5c3-1.3 6-1.3 9 0v14c-3-1.3-6-1.3-9 0V5z"/><path d="M21 5c-3-1.3-6-1.3-9 0v14c3-1.3 6-1.3 9 0V5z"/></svg>Scholar</a>
+      <a class="icon-link" href="mailto:niditaroy@uvic.ca">Email</a>
+      <a class="icon-link" href="https://github.com/Nidita" target="_blank" rel="noopener">GitHub</a>
+      <a class="icon-link" href="https://linkedin.com/in/nidita-roy-0537b31b0/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="icon-link" href="https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
     </span>
   </div>
 </footer>
-
 </body>
 </html>
