@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Nidita Roy</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-row">
+    <a class="brand" href="index.html">Nidita Roy</a>
+    <nav class="primary">
+      <a href="index.html">Home</a>
+      <a href="research.html" aria-current="page">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html">Projects &amp; Code</a>
+      <a href="teaching.html">Teaching &amp; Service</a>
+      <a href="contact.html">CV &amp; Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" style="padding-top:48px;">
+    <span class="eyebrow">Medical Computer Vision Lab</span>
+    <h1 style="font-size:2.2rem;">Research</h1>
+    <p class="lede">My research develops deep learning methods that remain reliable as medical imaging protocols, scanners, and patient populations shift over time — with supporting work in multimodal fusion, segmentation, and clinical data integration.</p>
+    <div class="ramp r-a"></div>
+  </section>
+
+  <section id="hu-adaptation">
+    <div class="work-card">
+      <span class="status review">Under review · Manuscript submitted 2026</span>
+      <h3>Learning to Window: Context-Aware HU Adaptation for Continual Trauma Injury Detection in CT Scans</h3>
+      <div class="meta">Lead author · Medical Computer Vision Lab, University of Victoria · supervised by Dr. Ashery Mbilinyi</div>
+      <dl>
+        <dt>Motivation</dt>
+        <dd>Fixed windowing and static models degrade when scanner protocols or patient demographics shift — a real constraint in trauma radiology.</dd>
+        <dt>Approach</dt>
+        <dd>A learnable windowing technique combined with context-aware Hounsfield Unit adaptation, so models can adjust to new imaging conditions without full retraining.</dd>
+        <dt>Dataset</dt>
+        <dd><span class="placeholder-note">to confirm what can be disclosed pre-publication</span></dd>
+        <dt>Outcome</dt>
+        <dd>In progress — manuscript under review, results not yet public.</dd>
+      </dl>
+      <div class="links"><a href="#">Paper (pending)</a> <a href="#">Code (pending)</a></div>
+    </div>
+  </section>
+
+  <section id="forgetting-study">
+    <div class="work-card">
+      <span class="status review">Under review · Manuscript submitted 2026</span>
+      <h3>What Limits Continual Learning for Abdominal-Trauma CT Detection? A Diagnostic Study of Forgetting vs. Representation Bottlenecks</h3>
+      <div class="meta">Co-author · Medical Computer Vision Lab, University of Victoria</div>
+      <dl>
+        <dt>Research question</dt>
+        <dd>What actually limits continual learning performance in abdominal-trauma CT detection — catastrophic forgetting, or bottlenecks in the learned representation itself?</dd>
+        <dt>My role</dt>
+        <dd><span class="placeholder-note">confirm precise contribution before publishing</span></dd>
+      </dl>
+      <div class="links"><a href="#">Paper (pending)</a></div>
+    </div>
+  </section>
+
+  <section id="spinal-disease">
+    <div class="work-card">
+      <span class="status published">Accepted · 2026</span>
+      <h3>Spinal Disease Detection via Deep Multimodal Fusion of X-ray Imagery and Demographic Features</h3>
+      <div class="meta">Lead author · BSc thesis</div>
+      <dl>
+        <dt>Motivation</dt>
+        <dd>Multimodal fusion of imaging and demographic data for identifying spine conditions.</dd>
+        <dt>Approach</dt>
+        <dd>Deep multimodal fusion model across eight spine-condition classes, followed by a segmentation stage.</dd>
+        <dt>Outcome</dt>
+        <dd>High classification accuracy across eight spine conditions <span class="placeholder-note">confirm exact figures and venue name before publishing</span></dd>
+      </dl>
+      <div class="links"><a href="#">Paper (link pending)</a></div>
+    </div>
+  </section>
+
+  <section id="wound-segmentation">
+    <div class="work-card">
+      <span class="status review">Preprint · arXiv 2502.10652, Feb 2025</span>
+      <h3>Deep Learning for Wound Tissue Segmentation: A Comprehensive Evaluation Using a Novel Dataset</h3>
+      <div class="meta">2nd of 5 authors — Kabir, M.A., Roy, N., Hossain, M.E., Featherston, J., Ahmed, S.</div>
+      <dl>
+        <dt>Research question</dt>
+        <dd>How do patch-based, super-pixel-based, and full segmentation models compare for wound-tissue segmentation?</dd>
+        <dt>Dataset</dt>
+        <dd>147 wound images across six tissue types: slough, granulation, maceration, necrosis, bone, and tendon.</dd>
+        <dt>Approach</dt>
+        <dd>Comparative evaluation including UNet, cGAN-based methods, and FPN+VGG16 across three labelling formats.</dd>
+        <dt>My contribution</dt>
+        <dd>Literature review and coding implementation.</dd>
+      </dl>
+      <div class="links"><a href="https://arxiv.org/abs/2502.10652" target="_blank" rel="noopener">Paper on arXiv →</a></div>
+    </div>
+  </section>
+
+  <section id="palliative-survival">
+    <div class="work-card">
+      <span class="status published">Published · Cancers, 2023</span>
+      <h3>Deep Learning Prediction Model for Patient Survival Outcomes in Palliative Care Using Actigraphy Data and Clinical Information</h3>
+      <div class="meta">2nd of 8 authors — Huang, Y., Roy, N., Dhar, E., Upadhyay, U., Kabir, M.A., Uddin, M., Tseng, C-L., Syed-Abdul, S.</div>
+      <dl>
+        <dt>Research question</dt>
+        <dd>Can wearable actigraphy data combined with clinical information predict palliative-care survival outcomes better than traditional tools (KPS, PPI)?</dd>
+        <dt>Dataset</dt>
+        <dd>Prospective cohort of palliative-care patients, Taipei Medical University Hospital.</dd>
+        <dt>My contribution</dt>
+        <dd>Statistical analysis; writing — original draft preparation.</dd>
+      </dl>
+      <div class="links"><a href="https://doi.org/10.3390/cancers15082232" target="_blank" rel="noopener">Paper (DOI) →</a></div>
+    </div>
+  </section>
+
+  <section id="bengali-meme">
+    <div class="work-card">
+      <span class="status published">Published · 26th ICCIT, 2023</span>
+      <h3>Enhancing Offensive Bengali Social Media Meme Detection: A Weighted Ensemble Architecture</h3>
+      <div class="meta">Dataset creation &amp; modelling <span class="placeholder-note">confirm exact author order</span></div>
+      <p>Earlier work in multimodal fusion — combining text and image models — that informs my current approach to combining imaging and clinical modalities. Not part of my medical-imaging research line, included here as methodological background.</p>
+      <dl>
+        <dt>Approach</dt>
+        <dd>Weighted ensemble of multimodal (BERT + image classifier) models across a three-level hierarchical classification.</dd>
+        <dt>Dataset</dt>
+        <dd>Multi-modal Offensive Memes Bengali Dataset (MoMBD), 3,662 memes, created for this work.</dd>
+        <dt>Outcome</dt>
+        <dd>Weighted F1-score of 71.84% on fine-grained classification.</dd>
+      </dl>
+      <div class="links"><a href="https://ieeexplore.ieee.org/abstract/document/10441496" target="_blank" rel="noopener">Paper on IEEE Xplore →</a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Nidita Roy · Medical Computer Vision Lab, University of Victoria</span>
+    <span><a href="mailto:niditaroy@uvic.ca">niditaroy@uvic.ca</a> · <a href="https://github.com/Nidita">GitHub</a> · <a href="https://linkedin.com/in/nidita-roy-0537b31b0/">LinkedIn</a> · <a href="https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en">Scholar</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
