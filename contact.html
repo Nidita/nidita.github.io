@@ -25,18 +25,41 @@
 <main class="wrap">
 
   <section class="hero" style="padding-top:48px;">
-    <span class="eyebrow">Get in touch</span>
-    <h1 style="font-size:2.2rem;">CV &amp; Contact</h1>
-    <p class="lede">I'm happy to discuss PhD opportunities, research collaboration, or questions about my work in medical image analysis, continual learning, and multimodal deep learning for healthcare.</p>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="assets/Nidita_Roy_CV.pdf" target="_blank" rel="noopener">Download CV</a>
-      <a class="btn btn-ghost" href="mailto:niditaroy@uvic.ca">Email me</a>
+    <div class="scan-grid" aria-hidden="true"></div>
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Get in touch</span>
+        <h1 style="font-size:2.2rem;">CV &amp; Contact</h1>
+        <p class="lede">I'm happy to discuss PhD opportunities, research collaboration, or questions about my work in medical image analysis, continual learning, and multimodal deep learning for healthcare.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="assets/Nidita_Roy_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+          <a class="btn btn-ghost" href="mailto:niditaroy@uvic.ca">Email me</a>
+        </div>
+        <!-- Add your CV PDF at /assets/Nidita_Roy_CV.pdf in this repo so the Download CV button above works -->
+      </div>
+      <div>
+        <div class="viewer-frame sm">
+          <div class="frame-inner">
+            <img src="assets/profile.jpg" alt="Nidita Roy">
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+          </div>
+          <div class="viewer-caption">
+            <span class="fig">FIG. 01</span>
+            <span>Nidita Roy</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Add your CV PDF at /assets/Nidita_Roy_CV.pdf in this repo so the Download CV button above works -->
     <div class="ramp r-a"></div>
   </section>
 
   <section>
+    <div class="section-head">
+      <div class="title-group">
+        <span class="section-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+        <h2>Contact details</h2>
+      </div>
+    </div>
     <table class="data">
       <tbody>
         <tr><td class="mono">Email</td><td><a href="mailto:niditaroy@uvic.ca">niditaroy@uvic.ca</a></td></tr>
@@ -62,7 +85,12 @@
 <footer class="site-footer">
   <div class="wrap">
     <span>© 2026 Nidita Roy · Medical Computer Vision Lab, University of Victoria</span>
-    <span><a href="mailto:niditaroy@uvic.ca">niditaroy@uvic.ca</a> · <a href="https://github.com/Nidita">GitHub</a> · <a href="https://linkedin.com/in/nidita-roy-0537b31b0/">LinkedIn</a> · <a href="https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en">Scholar</a></span>
+    <span class="icon-row">
+      <a class="icon-link" href="mailto:niditaroy@uvic.ca"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email</a>
+      <a class="icon-link" href="https://github.com/Nidita" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 6L3 12l5 6"/><path d="M16 6l5 6-5 6"/></svg>GitHub</a>
+      <a class="icon-link" href="https://linkedin.com/in/nidita-roy-0537b31b0/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 15l6-6"/><path d="M11 6l1-1a3.5 3.5 0 015 5l-1 1"/><path d="M13 18l-1 1a3.5 3.5 0 01-5-5l1-1"/></svg>LinkedIn</a>
+      <a class="icon-link" href="https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M3 5c3-1.3 6-1.3 9 0v14c-3-1.3-6-1.3-9 0V5z"/><path d="M21 5c-3-1.3-6-1.3-9 0v14c3-1.3 6-1.3 9 0V5z"/></svg>Scholar</a>
+    </span>
   </div>
 </footer>
 

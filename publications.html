@@ -25,13 +25,19 @@
 <main class="wrap">
 
   <section class="hero" style="padding-top:48px;">
+    <div class="scan-grid" aria-hidden="true"></div>
     <span class="eyebrow">Publication record</span>
     <h1 style="font-size:2.2rem;">Publications</h1>
     <div class="ramp r-a"></div>
   </section>
 
   <section>
-    <div class="section-head"><h2>Peer-reviewed journal articles</h2></div>
+    <div class="section-head">
+      <div class="title-group">
+        <span class="section-icon"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 15.5v-10z"/><path d="M4 15.5A2.5 2.5 0 016.5 18H20"/></svg></span>
+        <h2>Peer-reviewed journal articles</h2>
+      </div>
+    </div>
     <table class="data">
       <thead><tr><th>Citation</th><th>Status</th><th>My contribution</th></tr></thead>
       <tbody>
@@ -45,7 +51,12 @@
   </section>
 
   <section>
-    <div class="section-head"><h2>Peer-reviewed conference papers</h2></div>
+    <div class="section-head">
+      <div class="title-group">
+        <span class="section-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4"/></svg></span>
+        <h2>Peer-reviewed conference papers</h2>
+      </div>
+    </div>
     <table class="data">
       <thead><tr><th>Citation</th><th>Status</th><th>My contribution</th></tr></thead>
       <tbody>
@@ -55,7 +66,7 @@
           <td>Dataset creation &amp; modelling</td>
         </tr>
         <tr>
-          <td><strong>Roy, N.</strong> et al. "Spinal Disease Detection via Deep Multimodal Fusion of X-ray Imagery and Demographic Features." 2026. <!-- add exact venue name once confirmed --></td>
+          <td><strong>Roy, N.</strong> et al. "Spinal Disease Detection via Deep Multimodal Fusion of X-ray Imagery and Demographic Features." PECCI 2026.</td>
           <td><span class="status published">Accepted</span></td>
           <td>Lead author (BSc thesis)</td>
         </tr>
@@ -64,7 +75,12 @@
   </section>
 
   <section>
-    <div class="section-head"><h2>Preprints</h2></div>
+    <div class="section-head">
+      <div class="title-group">
+        <span class="section-icon"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h6"/><path d="M14 3v6h6"/><circle cx="17" cy="17" r="4"/><path d="M17 15.5V17l1 1"/></svg></span>
+        <h2>Preprints</h2>
+      </div>
+    </div>
     <table class="data">
       <thead><tr><th>Citation</th><th>Status</th><th>My contribution</th></tr></thead>
       <tbody>
@@ -78,7 +94,12 @@
   </section>
 
   <section>
-    <div class="section-head"><h2>Manuscripts under review</h2></div>
+    <div class="section-head">
+      <div class="title-group">
+        <span class="section-icon"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h4"/><path d="M14 3v6h6"/><path d="M16.5 14.5l3 3L14 23l-3.3.5.5-3.3z"/></svg></span>
+        <h2>Manuscripts under review</h2>
+      </div>
+    </div>
     <table class="data">
       <thead><tr><th>Citation</th><th>Status</th><th>My contribution</th></tr></thead>
       <tbody>
@@ -102,7 +123,12 @@
 <footer class="site-footer">
   <div class="wrap">
     <span>© 2026 Nidita Roy · Medical Computer Vision Lab, University of Victoria</span>
-    <span><a href="mailto:niditaroy@uvic.ca">niditaroy@uvic.ca</a> · <a href="https://github.com/Nidita">GitHub</a> · <a href="https://linkedin.com/in/nidita-roy-0537b31b0/">LinkedIn</a> · <a href="https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en">Scholar</a></span>
+    <span class="icon-row">
+      <a class="icon-link" href="mailto:niditaroy@uvic.ca"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email</a>
+      <a class="icon-link" href="https://github.com/Nidita" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 6L3 12l5 6"/><path d="M16 6l5 6-5 6"/></svg>GitHub</a>
+      <a class="icon-link" href="https://linkedin.com/in/nidita-roy-0537b31b0/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 15l6-6"/><path d="M11 6l1-1a3.5 3.5 0 015 5l-1 1"/><path d="M13 18l-1 1a3.5 3.5 0 01-5-5l1-1"/></svg>LinkedIn</a>
+      <a class="icon-link" href="https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M3 5c3-1.3 6-1.3 9 0v14c-3-1.3-6-1.3-9 0V5z"/><path d="M21 5c-3-1.3-6-1.3-9 0v14c3-1.3 6-1.3 9 0V5z"/></svg>Scholar</a>
+    </span>
   </div>
 </footer>
 

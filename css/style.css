@@ -106,7 +106,8 @@ nav.primary a:hover, nav.primary a[aria-current="page"] {
 }
 
 /* ---------- Hero ---------- */
-.hero { padding: 72px 0 8px; }
+.hero { padding: 72px 0 8px; position: relative; overflow: hidden; }
+.hero > * { position: relative; z-index: 1; }
 .eyebrow {
   font-family: var(--font-mono); font-size: 0.78rem; color: var(--signal-ink);
   background: var(--signal-soft); display: inline-block;
@@ -143,6 +144,8 @@ nav.primary a:hover, nav.primary a[aria-current="page"] {
 section { padding: 8px 0 48px; }
 .section-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 24px; flex-wrap: wrap; gap: 8px;}
 .section-head .tag { font-family: var(--font-mono); font-size: 0.72rem; color: var(--scan-mid); }
+.section-head .title-group { display: flex; align-items: center; gap: 12px; }
+.section-head .title-group h2 { margin: 0; }
 
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
@@ -178,6 +181,10 @@ section { padding: 8px 0 48px; }
 .work-card dd { margin: 0; color: var(--ink-soft); }
 .work-card .links { display: flex; gap: 14px; margin-top: 14px; font-size: 0.86rem; }
 
+.work-card .kicker { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.work-card .kicker svg { width: 16px; height: 16px; fill: none; stroke: var(--signal-ink); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.work-card .kicker span { font-family: var(--font-mono); font-size: 0.7rem; color: var(--scan-mid); text-transform: uppercase; letter-spacing: 0.05em; }
+
 /* Tables */
 table.data { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
 table.data th {
@@ -203,7 +210,7 @@ footer.site-footer {
   border-top: 1px solid var(--line); margin-top: 60px; padding: 32px 0 60px;
   font-size: 0.85rem; color: var(--scan-mid);
 }
-footer.site-footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+footer.site-footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; align-items: center; }
 footer.site-footer a { color: var(--ink-soft); }
 
 .placeholder-note {
@@ -218,3 +225,94 @@ details.collapse[open] summary { color: var(--ink); }
 @keyframes riseIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 .hero h1, .hero .role { animation: riseIn 0.5s ease both; }
 .hero .role { animation-delay: 0.08s; }
+
+/* =========================================================
+   Additions — icons, photo treatment, decorative texture
+   ========================================================= */
+
+/* ---------- Icon circles (research-interest cards) ---------- */
+.icon-circle {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--signal-soft);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.icon-circle svg {
+  width: 20px; height: 20px;
+  fill: none; stroke: var(--signal-ink); stroke-width: 1.6;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* ---------- Small heading marker used in section-head ---------- */
+.section-icon {
+  width: 32px; height: 32px; flex: none;
+  border: 1px solid var(--line); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--paper-raised);
+}
+.section-icon svg {
+  width: 15px; height: 15px;
+  fill: none; stroke: var(--signal-ink); stroke-width: 1.6;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* ---------- Footer icon links ---------- */
+.icon-row { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+.icon-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--ink-soft); text-decoration: none; font-size: 0.85rem;
+}
+.icon-link svg {
+  width: 15px; height: 15px;
+  fill: none; stroke: currentColor; stroke-width: 1.6;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.icon-link:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- Viewer frame — photo treatment styled like a scan
+   viewer: corner reticles + a mono caption line, echoing the
+   HU-windowing motif rather than a generic framed photo. ---------- */
+.viewer-frame {
+  position: relative;
+  border: 1px solid var(--line);
+  background: var(--paper-raised);
+  padding: 10px;
+  border-radius: var(--radius);
+}
+.viewer-frame .frame-inner {
+  position: relative; overflow: hidden; border-radius: 2px;
+  aspect-ratio: 1; background: var(--ink);
+}
+.viewer-frame img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: grayscale(10%) contrast(1.04);
+}
+.viewer-frame .corner { position: absolute; width: 16px; height: 16px; border: 2px solid var(--signal); pointer-events: none; }
+.viewer-frame .corner.tl { top: 8px; left: 8px; border-right: none; border-bottom: none; }
+.viewer-frame .corner.tr { top: 8px; right: 8px; border-left: none; border-bottom: none; }
+.viewer-frame .corner.bl { bottom: 8px; left: 8px; border-right: none; border-top: none; }
+.viewer-frame .corner.br { bottom: 8px; right: 8px; border-left: none; border-top: none; }
+.viewer-caption {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--font-mono); font-size: 0.68rem; color: var(--scan-mid);
+  margin-top: 10px; padding: 0 2px;
+}
+.viewer-caption .fig { color: var(--signal-ink); }
+.viewer-frame.sm { padding: 8px; }
+.viewer-frame.sm .corner { width: 12px; height: 12px; }
+
+/* ---------- Photo + text layout helper (teaching, contact) ---------- */
+.split-media { display: grid; grid-template-columns: 220px 1fr; gap: 26px; align-items: start; }
+@media (max-width: 640px) { .split-media { grid-template-columns: 1fr; } .split-media .viewer-frame { max-width: 260px; } }
+
+/* ---------- Subtle scan-grid texture behind hero sections ---------- */
+.scan-grid {
+  position: absolute; inset: 0; z-index: 0;
+  background-image: radial-gradient(var(--line) 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.55;
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 82%);
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+  pointer-events: none;
+}
