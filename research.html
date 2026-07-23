@@ -57,44 +57,6 @@
     </article>
   </section>
 
-  <section id="learning-to-window">
-    <article class="work-card featured">
-      <div class="kicker">Lead-author manuscript</div>
-      <span class="status review">Under review</span>
-      <h3>Learnable CT-windowing for continual trauma-injury detection</h3>
-      <div class="meta">Lead author · MSc thesis research · University of Victoria</div>
-      <p>Clinical CT viewing commonly relies on fixed Hounsfield Unit windows. This project replaces that fixed preprocessing choice with a differentiable module that learns task-specific window parameters jointly with the diagnostic model.</p>
-      <div class="result-strip" aria-label="Reported results from the submitted manuscript">
-        <div><strong>0.770</strong><span>Average AUROC with learnable windowing</span></div>
-        <div><strong>44%</strong><span>Reduction in catastrophic forgetting</span></div>
-        <div><strong>3 / 5</strong><span>Tasks with positive forward transfer</span></div>
-      </div>
-      <dl>
-        <dt>Motivation</dt><dd>Fixed window presets may suppress task-relevant contrast and impose a representation bottleneck before continual learning begins.</dd>
-        <dt>Approach</dt><dd>A differentiable Learning-to-Window module learns per-task CT intensity mappings within a continual-learning pipeline.</dd>
-        <dt>Baseline</dt><dd>Fixed-window continual learning achieved an average AUROC of 0.540 in the reported experiments.</dd>
-        <dt>Outcome</dt><dd>The submitted manuscript reports an increase to 0.770 average AUROC, lower forgetting, and positive forward transfer on three of five tasks.</dd>
-        <dt>Availability</dt><dd>Paper and implementation links will be added after the review process permits public release.</dd>
-      </dl>
-    </article>
-  </section>
-
-  <section id="limits-study">
-    <article class="work-card featured">
-      <div class="kicker">Diagnostic study</div>
-      <span class="status review">Submitted</span>
-      <h3>Diagnosing why continual learning struggles on abdominal-trauma CT detection</h3>
-      <div class="meta">Co-author · Medical Computer Vision Lab, University of Victoria</div>
-      <p>This work studies a related domain-incremental setting where standard continual-learning methods remain near chance. Instead of interpreting every weak result as catastrophic forgetting, the study evaluates whether the representation and coarse patient-level label are themselves preventing the task from being learned.</p>
-      <dl>
-        <dt>Benchmarks</dt><dd>Fine-tuning, EWC, Replay, and EWC+Replay under matched training conditions.</dd>
-        <dt>Finding</dt><dd>Weak predictive performance is traced primarily to representation quality and coarse labeling rather than to forgetting alone.</dd>
-        <dt>Reformulation</dt><dd>A patient-level multiple-instance learning formulation is used to align slice-level evidence with patient-level abdominal-trauma labels.</dd>
-        <dt>Contribution</dt><dd>The study offers a diagnostic workflow for deciding whether to improve continual-learning algorithms or first repair the upstream learning problem.</dd>
-      </dl>
-    </article>
-  </section>
-
   <section>
     <div class="section-head">
       <div class="title-group"><span class="section-icon">02</span><h2>Research objectives</h2></div>
