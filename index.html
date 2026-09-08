@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nidita Roy — Medical Image Analysis & Continual Learning</title>
+  <title>Nidita Roy — Medical Image Analysis & Class-Incremental Learning</title>
   <meta name="description" content="Nidita Roy is an MSc researcher at the University of Victoria working on class-incremental learning, modality-aware medical image representations, and multimodal healthcare AI.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <meta property="og:title" content="Nidita Roy — Medical Image Analysis & Continual Learning">
+  <meta property="og:title" content="Nidita Roy — Medical Image Analysis & Class-Incremental Learning">
   <meta property="og:description" content="Research in class-incremental learning, modality-aware medical image representations, and multimodal healthcare AI.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="stylesheet" href="css/style.css?v=12">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,8 +51,8 @@
       <div>
         <span class="eyebrow">MSc Computer Science · University of Victoria</span>
         <h1>Nidita Roy</h1>
-        <p class="role">Medical image analysis · continual and adaptive learning · multimodal healthcare AI</p>
-        <p class="lede research-lead">I study how medical-imaging systems can acquire new clinical tasks while retaining useful prior knowledge. My current thesis direction focuses on class-incremental learning with modality-aware representation primitives for CT and MRI, alongside ongoing work that diagnoses forgetting, representation quality, and task learnability in abdominal-trauma CT.</p>
+        <p class="role">Medical image analysis · class-incremental learning · multimodal healthcare AI</p>
+        <p class="lede research-lead">I study how medical-imaging systems can acquire new clinical tasks while retaining useful prior knowledge. My current thesis direction focuses on class-incremental learning with modality-aware representation primitives for CT and MRI, while building a research agenda around retention, forward transfer, and reliable learning from heterogeneous clinical data.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="research.html">Explore my research</a>
           <a class="btn btn-ghost" href="publications.html">Publications</a>
@@ -69,8 +69,8 @@
         </div>
       </div>
     </div>
-    <div class="ramp r-hero" role="img" aria-label="A grayscale CT Hounsfield Unit ramp with a highlighted window"></div>
-    <div class="ramp-label"><span>−1000 HU · air</span><span>adaptive CT window</span><span>+3000 HU · dense bone</span></div>
+    <div class="ramp r-hero" role="img" aria-label="A stylized medical-imaging signal ramp"></div>
+    <div class="ramp-label"><span>medical imaging</span><span>representation learning</span><span>sequential adaptation</span></div>
   </section>
 
   <section aria-label="Academic snapshot">
@@ -83,11 +83,23 @@
   </section>
 
   <section>
+    <div class="section-head"><div class="title-group"><span class="section-icon">00</span><h2>Affiliations &amp; profiles</h2></div></div>
+    <div class="logo-strip">
+      <a class="logo-tile" href="https://www.uvic.ca/ecs/computerscience/" target="_blank" rel="noopener"><span class="logo-mark"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-building"></use></svg></span><span class="logo-text"><strong>University of Victoria</strong><span>Department of Computer Science</span></span></a>
+      <a class="logo-tile" href="https://asherymbilinyi.github.io/" target="_blank" rel="noopener"><span class="logo-mark"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-flask"></use></svg></span><span class="logo-text"><strong>Medical Computer Vision Lab</strong><span>Research group and lab context</span></span></a>
+      <a class="logo-tile" href="https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en" target="_blank" rel="noopener"><span class="logo-mark"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-scholar"></use></svg></span><span class="logo-text"><strong>Google Scholar</strong><span>Publications and citation profile</span></span></a>
+      <a class="logo-tile" href="https://github.com/Nidita" target="_blank" rel="noopener"><span class="logo-mark"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-github"></use></svg></span><span class="logo-text"><strong>GitHub</strong><span>Code repositories and projects</span></span></a>
+      <a class="logo-tile" href="https://linkedin.com/in/nidita-roy-0537b31b0/" target="_blank" rel="noopener"><span class="logo-mark"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-linkedin"></use></svg></span><span class="logo-text"><strong>LinkedIn</strong><span>Professional profile</span></span></a>
+      <a class="logo-tile" href="https://ieeexplore.ieee.org/abstract/document/11662047" target="_blank" rel="noopener"><span class="logo-mark"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-document"></use></svg></span><span class="logo-text"><strong>IEEE Xplore</strong><span>Published spinal-disease paper</span></span></a>
+    </div>
+  </section>
+
+  <section>
     <div class="section-head"><div class="title-group"><span class="section-icon">01</span><h2>Research focus</h2></div></div>
     <div class="grid-4">
       <article class="card interest-card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-ct-scan"></use></svg></div><span class="k">01</span><h3>Medical Image Analysis</h3><p>Representation learning for clinically meaningful classification and segmentation across CT, MRI, and radiographic imaging.</p></article>
       <article class="card interest-card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-layers"></use></svg></div><span class="k">02</span><h3>Class-Incremental Learning</h3><p>Learning sequential clinical tasks while measuring retention, forward transfer, and task-level performance.</p></article>
-      <article class="card interest-card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-window"></use></svg></div><span class="k">03</span><h3>Modality-Aware Representations</h3><p>Task-conditioned representation primitives that account for CT intensity structure and MRI pulse-sequence variation.</p></article>
+      <article class="card interest-card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-aperture"></use></svg></div><span class="k">03</span><h3>Modality-Aware Representations</h3><p>Task-conditioned representation primitives that account for CT intensity structure and MRI pulse-sequence variation.</p></article>
       <article class="card interest-card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-fusion"></use></svg></div><span class="k">04</span><h3>Multimodal Healthcare AI</h3><p>Combining images with demographic, physiological, and structured clinical information.</p></article>
     </div>
   </section>
@@ -100,13 +112,6 @@
       <h3>Class-Incremental Learning with Modality-Aware Representation Primitives</h3>
       <p>The thesis investigates whether modality-aware representations can make continual medical-imaging systems more robust across sequential tasks. The planned work develops task-conditioned CT representations, MRI pulse-sequence-aware representations, and continual-learning evaluations centered on retention, forward transfer, and task performance.</p>
       <div class="links"><a href="research.html#thesis-direction">Thesis objectives →</a></div>
-    </article>
-    <article class="work-card" style="margin-top:16px;">
-      <div class="kicker">Ongoing study</div>
-      <span class="status progress">Work in progress</span>
-      <h3>Context-Aware HU Adaptation for Continual Trauma Injury Detection in CT</h3>
-      <p>Ongoing experimental work on task-adaptive CT intensity representations and continual organ-level trauma detection. This work is still being developed and is not listed as a publication.</p>
-      <div class="links"><a href="projects.html">Implementation details →</a></div>
     </article>
   </section>
 

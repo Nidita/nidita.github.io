@@ -521,3 +521,62 @@ details.collapse[open] summary { color: var(--ink); }
 @media (max-width: 720px) {
   .snapshot { grid-template-columns: 1fr; }
 }
+
+
+.logo-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.logo-tile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper-raised);
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.logo-tile:hover {
+  transform: translateY(-2px);
+  border-color: var(--scan-mid);
+  box-shadow: 0 8px 20px rgba(21, 24, 28, 0.05);
+}
+.logo-mark {
+  width: 40px;
+  height: 40px;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--signal-soft);
+  color: var(--signal-ink);
+}
+.logo-mark .icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: 0;
+}
+.logo-text strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--ink);
+  font-size: 0.96rem;
+}
+.logo-text span {
+  display: block;
+  color: var(--scan-mid);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+@media (max-width: 900px) {
+  .logo-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .logo-strip { grid-template-columns: 1fr; }
+}
