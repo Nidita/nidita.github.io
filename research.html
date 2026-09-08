@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research — Nidita Roy</title>
-  <meta name="description" content="Research by Nidita Roy on continual learning, learnable CT windowing, abdominal trauma detection, multimodal learning, and medical image analysis.">
+  <meta name="description" content="Research by Nidita Roy on class-incremental learning, modality-aware representation primitives, CT and MRI, multimodal learning, and medical image analysis.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <meta property="og:title" content="Research — Nidita Roy">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="css/style.css?v=10">
+  <link rel="stylesheet" href="css/style.css?v=11">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -19,30 +19,43 @@
     <div class="scan-grid" aria-hidden="true"></div>
     <span class="eyebrow">Medical Computer Vision Lab</span>
     <h1>Research</h1>
-    <p class="lede research-lead">My research focuses on a practical question in medical AI: before trying to prevent catastrophic forgetting, can the model reliably learn each clinical task in the first place? I use continual abdominal-trauma CT detection to study how preprocessing, representation quality, labels, and task formulation interact with sequential learning.</p>
+    <p class="lede research-lead">My research investigates how medical-imaging systems can learn sequential clinical tasks while preserving useful prior knowledge. My preliminary thesis direction develops modality-aware representation primitives for CT and MRI, and evaluates whether explicitly modeling modality structure improves retention, forward transfer, and task performance in class-incremental learning.</p>
     <div class="ramp r-a"></div>
   </section>
 
-  <section id="learning-to-window">
-    <div class="section-head"><div class="title-group"><span class="section-icon">01</span><h2>Current MSc research</h2></div></div>
+  <section id="thesis-direction">
+    <div class="section-head"><div class="title-group"><span class="section-icon">01</span><h2>Preliminary thesis direction</h2></div></div>
     <article class="work-card featured priority-card">
-      <div class="kicker">MSc thesis · manuscript under review</div>
-      <span class="status review">Current work</span>
-      <h3>Learning to Window: Context-Aware HU Adaptation for Continual Trauma Injury Detection in CT Scans</h3>
-      <p>Fixed CT windows encode a preprocessing choice before the network sees the image. This project asks whether that choice should instead be part of the learning problem, especially when a model must acquire abdominal-trauma tasks sequentially.</p>
+      <div class="kicker">MSc thesis · in development</div>
+      <span class="status progress">Current direction</span>
+      <h3>Class-Incremental Learning with Modality-Aware Representation Primitives</h3>
+      <p>The thesis asks whether representation primitives that explicitly encode imaging-modality structure can improve continual learning across sequential medical-imaging tasks.</p>
       <dl>
-        <dt>Question</dt><dd>Can task-adaptive Hounsfield Unit preprocessing improve continual trauma detection while preserving previously learned knowledge?</dd>
-        <dt>Approach</dt><dd>Differentiable CT windowing combined with sequential organ-level training and continual-learning baselines.</dd>
-        <dt>Diagnosis</dt><dd>Ablations separate the effects of broad versus narrow initialization, hard clipping versus smooth transforms, window learnability, and task-specific adaptation.</dd>
-        <dt>Goal</dt><dd>Determine which gains come from the continual-learning method itself and which come from making the imaging representation more learnable.</dd>
+        <dt>Objective 1</dt><dd>Develop task-conditioned CT representation primitives that adapt Hounsfield Unit intensity parameters using learned task embeddings, without treating a fixed preprocessing preset as the final representation.</dd>
+        <dt>Objective 2</dt><dd>Design an analogous MRI pulse-sequence conditioning module for T1-weighted, T2-weighted, FLAIR, and DWI data. Candidate datasets include BraTS, AOMIC ID1000, and ADNI, which will be assessed for suitability for sequence-aware and modality-aware experiments.</dd>
+        <dt>Objective 3</dt><dd>Integrate the proposed modality-aware representation primitives into class-incremental learning pipelines and compare them with standard continual-learning approaches.</dd>
+        <dt>Objective 4</dt><dd>Evaluate whether the proposed representations improve knowledge retention, forward transfer, and performance across sequential medical-imaging tasks.</dd>
       </dl>
-      <div class="chip-row"><span class="chip">PyTorch</span><span class="chip">CT</span><span class="chip">Continual learning</span><span class="chip">Learnable preprocessing</span><span class="chip">RSNA 2023</span></div>
-      <div class="links"><a href="projects.html">Implementation details →</a></div>
+    </article>
+  </section>
+
+  <section id="ongoing-ct-study">
+    <div class="section-head"><div class="title-group"><span class="section-icon">02</span><h2>Ongoing CT study</h2></div></div>
+    <article class="work-card">
+      <div class="kicker">Work in progress</div>
+      <span class="status progress">Ongoing</span>
+      <h3>Context-Aware HU Adaptation for Continual Trauma Injury Detection in CT</h3>
+      <p>This is an active experimental project on task-adaptive CT intensity representations and continual organ-level trauma detection. It remains work in progress and is intentionally not included in the publication record.</p>
+      <dl>
+        <dt>Focus</dt><dd>Task-adaptive HU representations for sequential abdominal-trauma detection.</dd>
+        <dt>Evaluation</dt><dd>Controlled comparisons of initialization, smooth intensity transforms, representation adaptation, and continual-learning strategy.</dd>
+        <dt>Status</dt><dd>Experiments and manuscript development are ongoing.</dd>
+      </dl>
     </article>
   </section>
 
   <section>
-    <div class="section-head"><div class="title-group"><span class="section-icon">02</span><h2>Diagnostic continual-learning study</h2></div></div>
+    <div class="section-head"><div class="title-group"><span class="section-icon">03</span><h2>Diagnostic continual-learning study</h2></div></div>
     <article class="work-card">
       <div class="kicker">Accepted · MICAD 2026</div>
       <span class="status published">Co-lead &amp; corresponding author</span>
@@ -54,16 +67,16 @@
   </section>
 
   <section>
-    <div class="section-head"><div class="title-group"><span class="section-icon">03</span><h2>Research direction</h2></div></div>
+    <div class="section-head"><div class="title-group"><span class="section-icon">04</span><h2>Research direction</h2></div></div>
     <div class="grid-3">
       <article class="card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-aperture"></use></svg></div><h3>Diagnose before optimizing</h3><p>Separate catastrophic forgetting from failure caused by weak representations, label mismatch, class imbalance, or insufficient task learnability.</p></article>
-      <article class="card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-window"></use></svg></div><h3>Make preprocessing learnable</h3><p>Study differentiable and context-aware intensity transformations instead of treating clinical preprocessing as a fixed upstream decision.</p></article>
+      <article class="card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-window"></use></svg></div><h3>Build modality-aware primitives</h3><p>Develop representations that explicitly account for CT intensity structure and MRI sequence variation before evaluating continual-learning behavior.</p></article>
       <article class="card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-fusion"></use></svg></div><h3>Move toward heterogeneous clinical data</h3><p>Extend adaptive learning beyond CT toward multimodal settings that combine images with demographic, physiological, and structured clinical information.</p></article>
     </div>
   </section>
 
   <section>
-    <div class="section-head"><div class="title-group"><span class="section-icon">04</span><h2>Earlier research foundation</h2></div><a class="section-tag" href="publications.html">All publications →</a></div>
+    <div class="section-head"><div class="title-group"><span class="section-icon">05</span><h2>Earlier research foundation</h2></div><a class="section-tag" href="publications.html">All publications →</a></div>
     <div class="grid-3">
       <article class="card"><span class="status published">Published · IEEE · 2026</span><h3>Spinal disease detection</h3><p>Lead-author multimodal work fusing X-ray imagery with demographic features for spinal-disease classification.</p><a class="card-link" href="https://ieeexplore.ieee.org/abstract/document/11662047" target="_blank" rel="noopener">IEEE Xplore →</a></article>
       <article class="card"><span class="status review">Preprint · 2025</span><h3>Wound tissue segmentation</h3><p>Dataset creation and implementation supporting a comparative benchmark across full-image, patch, and superpixel formulations.</p><a class="card-link" href="https://arxiv.org/abs/2502.10652" target="_blank" rel="noopener">arXiv →</a></article>

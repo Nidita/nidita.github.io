@@ -23,7 +23,6 @@ Keep your existing `assets/` folder. In particular, the pages expect:
 ## What changed
 
 - Removed repeated publication lists from Home, Research, and Contact.
-- Made the MSc thesis / Learning-to-Window project the central current-research item.
 - Updated the continual-learning paper to `Accepted · MICAD 2026`.
 - Updated the spinal-disease paper to `Published · IEEE · 2026` and linked IEEE Xplore document `11662047`.
 - Updated the wound-tissue preprint contribution to include `Data creation`.
@@ -36,3 +35,10 @@ Keep your existing `assets/` folder. In particular, the pages expect:
 ## GitHub Pages
 
 Push these replacement files to the `main` branch of `Nidita.github.io`. GitHub Pages should deploy from `main` and `/ (root)`.
+
+## September 2026 content revision
+
+- Reframed the preliminary thesis direction as **Class-Incremental Learning with Modality-Aware Representation Primitives**.
+- Kept the ongoing CT HU-adaptation study only as **work in progress**; it is not listed on the Publications page.
+- Added Fall 2026 TA appointments: **100 h CSC 110** and **25 h Course Based Testing Facility**.
+- Added FGS fellowship recognition for **2025–2026** and **2026–2027**; the 2026–2027 award is listed as **CAD $20,000**.
