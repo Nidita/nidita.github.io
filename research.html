@@ -7,100 +7,70 @@
   <meta name="description" content="Research by Nidita Roy on continual learning, learnable CT windowing, abdominal trauma detection, multimodal learning, and medical image analysis.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <meta property="og:title" content="Research — Nidita Roy">
-  <meta property="og:description" content="Research by Nidita Roy on continual learning, learnable CT windowing, abdominal trauma detection, multimodal learning, and medical image analysis.">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=10">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header">
-  <div class="nav-row">
-    <a class="brand" href="index.html">
-      <svg class="brand-mark" width="22" height="22" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-brand"></use></svg>
-      Nidita Roy
-    </a>
-    <nav class="primary" aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="research.html" aria-current="page">Research</a>
-      <a href="publications.html">Publications</a>
-      <a href="projects.html">Projects &amp; Code</a>
-      <a href="teaching.html">Teaching &amp; Service</a>
-      <a href="contact.html">CV &amp; Contact</a>
-    </nav>
-  </div>
-</header>
+<header class="site-header"><div class="nav-row"><a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true"><use href="assets/icons.svg#icon-brand"></use></svg>Nidita Roy</a><nav class="primary" aria-label="Primary navigation"><a href="index.html">Home</a><a href="research.html" aria-current="page">Research</a><a href="publications.html">Publications</a><a href="projects.html">Projects &amp; Code</a><a href="teaching.html">Teaching &amp; Service</a><a href="contact.html">CV &amp; Contact</a></nav></div></header>
 
 <main id="main-content" class="wrap">
   <section class="hero compact">
     <div class="scan-grid" aria-hidden="true"></div>
     <span class="eyebrow">Medical Computer Vision Lab</span>
     <h1>Research</h1>
-    <p class="lede">My work asks a deployment-oriented question: when continual-learning systems fail on real medical images, is catastrophic forgetting the primary problem, or are preprocessing, representation, labeling, and task design limiting the model before forgetting can even be meaningfully assessed?</p>
+    <p class="lede research-lead">My research focuses on a practical question in medical AI: before trying to prevent catastrophic forgetting, can the model reliably learn each clinical task in the first place? I use continual abdominal-trauma CT detection to study how preprocessing, representation quality, labels, and task formulation interact with sequential learning.</p>
     <div class="ramp r-a"></div>
   </section>
 
+  <section id="learning-to-window">
+    <div class="section-head"><div class="title-group"><span class="section-icon">01</span><h2>Current MSc research</h2></div></div>
+    <article class="work-card featured priority-card">
+      <div class="kicker">MSc thesis · manuscript under review</div>
+      <span class="status review">Current work</span>
+      <h3>Learning to Window: Context-Aware HU Adaptation for Continual Trauma Injury Detection in CT Scans</h3>
+      <p>Fixed CT windows encode a preprocessing choice before the network sees the image. This project asks whether that choice should instead be part of the learning problem, especially when a model must acquire abdominal-trauma tasks sequentially.</p>
+      <dl>
+        <dt>Question</dt><dd>Can task-adaptive Hounsfield Unit preprocessing improve continual trauma detection while preserving previously learned knowledge?</dd>
+        <dt>Approach</dt><dd>Differentiable CT windowing combined with sequential organ-level training and continual-learning baselines.</dd>
+        <dt>Diagnosis</dt><dd>Ablations separate the effects of broad versus narrow initialization, hard clipping versus smooth transforms, window learnability, and task-specific adaptation.</dd>
+        <dt>Goal</dt><dd>Determine which gains come from the continual-learning method itself and which come from making the imaging representation more learnable.</dd>
+      </dl>
+      <div class="chip-row"><span class="chip">PyTorch</span><span class="chip">CT</span><span class="chip">Continual learning</span><span class="chip">Learnable preprocessing</span><span class="chip">RSNA 2023</span></div>
+      <div class="links"><a href="projects.html">Implementation details →</a></div>
+    </article>
+  </section>
+
   <section>
-    <div class="section-head">
-      <div class="title-group"><span class="section-icon">01</span><h2>Research objectives</h2></div>
-    </div>
-    <div class="grid-2">
-      <article class="card"><div class="icon-circle"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-ct-scan"></use></svg></div><h3>Deployment realism</h3><p>Test whether continual-learning approaches remain credible on heterogeneous, low-prevalence medical data rather than only on simplified benchmarks.</p></article>
-      <article class="card"><div class="icon-circle"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-aperture"></use></svg></div><h3>Method diagnosis</h3><p>Separate forgetting from failures caused by preprocessing, feature quality, label granularity, and insufficient task learnability.</p></article>
-      <article class="card"><div class="icon-circle"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-layers"></use></svg></div><h3>Pipeline improvement</h3><p>Develop concrete changes—learnable CT windowing and patient-level multiple-instance learning—instead of only retuning existing methods.</p></article>
-      <article class="card"><div class="icon-circle"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-fusion"></use></svg></div><h3>Open problems</h3><p>Identify limitations that should shape future research in continual medical imaging, including evaluation under scarce data and limited compute.</p></article>
+    <div class="section-head"><div class="title-group"><span class="section-icon">02</span><h2>Diagnostic continual-learning study</h2></div></div>
+    <article class="work-card">
+      <div class="kicker">Accepted · MICAD 2026</div>
+      <span class="status published">Co-lead &amp; corresponding author</span>
+      <h3>What Limits Continual Learning for Abdominal-Trauma CT Detection? A Diagnostic Study of Forgetting vs. Representation Bottlenecks</h3>
+      <p>Rather than assuming catastrophic forgetting is the only failure mode, this work follows a staged diagnostic sequence: a custom CNN, a pretrained ResNet-18, and patient-level attention-based multiple-instance learning. The experiments compare fine-tuning, EWC, replay, EWC+replay, and LwF under class-incremental and window-based domain-incremental settings.</p>
+      <p>The central contribution is methodological: continual-learning performance is interpreted only after checking whether the representation, label granularity, and patient-level formulation make the underlying tasks learnable.</p>
+      <div class="links"><a href="https://github.com/AsheryMbilinyi/abdominal-trauma-ct-continual-learning" target="_blank" rel="noopener">Code repository →</a><a href="publications.html">Publication record →</a></div>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-head"><div class="title-group"><span class="section-icon">03</span><h2>Research direction</h2></div></div>
+    <div class="grid-3">
+      <article class="card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-aperture"></use></svg></div><h3>Diagnose before optimizing</h3><p>Separate catastrophic forgetting from failure caused by weak representations, label mismatch, class imbalance, or insufficient task learnability.</p></article>
+      <article class="card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-window"></use></svg></div><h3>Make preprocessing learnable</h3><p>Study differentiable and context-aware intensity transformations instead of treating clinical preprocessing as a fixed upstream decision.</p></article>
+      <article class="card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-fusion"></use></svg></div><h3>Move toward heterogeneous clinical data</h3><p>Extend adaptive learning beyond CT toward multimodal settings that combine images with demographic, physiological, and structured clinical information.</p></article>
     </div>
   </section>
 
   <section>
-    <div class="section-head">
-      <div class="title-group"><span class="section-icon">02</span><h2>Related research experience</h2></div>
-    </div>
-    <div class="grid-2">
-      <article class="card" style="border-left:3px solid var(--signal);">
-        <span class="status published">New · Preprint 2026</span>
-        <h3>What Limits Continual Learning for Abdominal-Trauma CT Detection?</h3>
-        <p>Co-lead author and corresponding author. Diagnostic study separating catastrophic forgetting from representation and label bottlenecks in class-incremental and domain-incremental CT task streams on the RSNA 2023 dataset.</p>
-        <div class="links compact-links"><a href="https://drive.google.com/file/d/1Q9G2xBy_uCBrMVlH6SwZ3UEdWXWPRsQ0/view?usp=sharing" target="_blank" rel="noopener">Read manuscript →</a><a href="https://github.com/AsheryMbilinyi/abdominal-trauma-ct-continual-learning" target="_blank" rel="noopener">Code →</a></div>
-      </article>
-      <article class="card">
-        <span class="status published">Accepted &amp; presented · PECCII 2026</span>
-        <h3>Spinal Disease Detection via Deep Multimodal Fusion</h3>
-        <p>Lead-author BSc thesis work combining X-ray imagery with demographic features to classify eight spine conditions, followed by segmentation.</p>
-        <div class="links compact-links"><a href="https://drive.google.com/drive/folders/12LjoJQtA8pEblI3PI1-BeRFlxQKf9A7Q" target="_blank" rel="noopener">Camera-ready manuscript →</a><a href="https://www.peccii.pust.ac.bd/" target="_blank" rel="noopener">PECCII 2026 ↗</a></div>
-      </article>
-      <article class="card">
-        <span class="status review">Preprint · 2025</span>
-        <h3>Deep Learning for Wound Tissue Segmentation</h3>
-        <p>Comparative evaluation of full-image, patch, and superpixel formulations across a novel six-tissue wound dataset.</p>
-        <a class="card-link" href="https://arxiv.org/abs/2502.10652" target="_blank" rel="noopener">Read on arXiv →</a>
-      </article>
-      <article class="card">
-        <span class="status published">Published · Cancers, 2023</span>
-        <h3>Survival Prediction in Palliative Care</h3>
-        <p>Multimodal modeling of wearable actigraphy and clinical information for survival-outcome prediction.</p>
-        <a class="card-link" href="https://doi.org/10.3390/cancers15082232" target="_blank" rel="noopener">Open article →</a>
-      </article>
-      <article class="card">
-        <span class="status published">Published · ICCIT, 2023</span>
-        <h3>Offensive Bengali Meme Detection</h3>
-        <p>Earlier multimodal work combining image and text models through a weighted ensemble architecture.</p>
-        <a class="card-link" href="https://ieeexplore.ieee.org/document/10441496/" target="_blank" rel="noopener">Open on IEEE Xplore →</a>
-      </article>
+    <div class="section-head"><div class="title-group"><span class="section-icon">04</span><h2>Earlier research foundation</h2></div><a class="section-tag" href="publications.html">All publications →</a></div>
+    <div class="grid-3">
+      <article class="card"><span class="status published">Published · IEEE · 2026</span><h3>Spinal disease detection</h3><p>Lead-author multimodal work fusing X-ray imagery with demographic features for spinal-disease classification.</p><a class="card-link" href="https://ieeexplore.ieee.org/abstract/document/11662047" target="_blank" rel="noopener">IEEE Xplore →</a></article>
+      <article class="card"><span class="status review">Preprint · 2025</span><h3>Wound tissue segmentation</h3><p>Dataset creation and implementation supporting a comparative benchmark across full-image, patch, and superpixel formulations.</p><a class="card-link" href="https://arxiv.org/abs/2502.10652" target="_blank" rel="noopener">arXiv →</a></article>
+      <article class="card"><span class="status published">Published · Cancers · 2023</span><h3>Palliative-care survival prediction</h3><p>Multimodal modeling of wearable actigraphy and clinical variables for survival-outcome prediction.</p><a class="card-link" href="https://doi.org/10.3390/cancers15082232" target="_blank" rel="noopener">Article →</a></article>
     </div>
   </section>
 </main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <span>© 2026 Nidita Roy · University of Victoria</span>
-    <span class="icon-row">
-      <a class="icon-link" href="mailto:niditaroy@uvic.ca"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-mail"></use></svg>Email</a>
-      <a class="icon-link" href="https://github.com/Nidita" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-github"></use></svg>GitHub</a>
-      <a class="icon-link" href="https://linkedin.com/in/nidita-roy-0537b31b0/" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-linkedin"></use></svg>LinkedIn</a>
-      <a class="icon-link" href="https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-scholar"></use></svg>Google Scholar</a>
-    </span>
-  </div>
-</footer>
+<footer class="site-footer"><div class="wrap"><span>© 2026 Nidita Roy · University of Victoria</span><span class="icon-row"><a class="icon-link" href="mailto:niditaroy@uvic.ca">Email</a><a class="icon-link" href="https://github.com/Nidita" target="_blank" rel="noopener">GitHub</a><a class="icon-link" href="https://linkedin.com/in/nidita-roy-0537b31b0/" target="_blank" rel="noopener">LinkedIn</a><a class="icon-link" href="https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></span></div></footer>
 </body>
 </html>

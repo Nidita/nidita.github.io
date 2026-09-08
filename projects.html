@@ -4,143 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects & Code — Nidita Roy</title>
-  <meta name="description" content="Research code and selected machine-learning and web-development projects by Nidita Roy.">
+  <meta name="description" content="Research implementations and selected software projects by Nidita Roy, with emphasis on medical imaging and continual learning.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <meta property="og:title" content="Projects & Code — Nidita Roy">
-  <meta property="og:description" content="Research code and selected machine-learning and web-development projects by Nidita Roy.">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=10">
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header">
-  <div class="nav-row">
-    <a class="brand" href="index.html">
-      <svg class="brand-mark" width="22" height="22" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-brand"></use></svg>
-      Nidita Roy
-    </a>
-    <nav class="primary" aria-label="Primary navigation">
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="publications.html">Publications</a>
-      <a href="projects.html" aria-current="page">Projects &amp; Code</a>
-      <a href="teaching.html">Teaching &amp; Service</a>
-      <a href="contact.html">CV &amp; Contact</a>
-    </nav>
-  </div>
-</header>
+<header class="site-header"><div class="nav-row"><a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true"><use href="assets/icons.svg#icon-brand"></use></svg>Nidita Roy</a><nav class="primary" aria-label="Primary navigation"><a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="projects.html" aria-current="page">Projects &amp; Code</a><a href="teaching.html">Teaching &amp; Service</a><a href="contact.html">CV &amp; Contact</a></nav></div></header>
 
 <main id="main-content" class="wrap">
-  <section class="hero compact">
-    <div class="scan-grid" aria-hidden="true"></div>
-    <span class="eyebrow">Implementation and open source</span>
-    <h1>Projects &amp; Code</h1>
-    <p class="lede">Research implementations, machine-learning prototypes, and selected software projects. Manuscript code will be linked when the review process and data-use conditions permit public release.</p>
-    <div class="ramp r-c"></div>
-  </section>
+  <section class="hero compact"><div class="scan-grid" aria-hidden="true"></div><span class="eyebrow">Implementation and reproducibility</span><h1>Projects &amp; Code</h1><p class="lede">Research implementations are listed first because they best represent my current technical work. Earlier software projects are retained as background rather than competing with the research narrative.</p><div class="ramp r-c"></div></section>
 
   <section>
-    <div class="section-head">
-      <div class="title-group"><span class="section-icon">01</span><h2>Research implementations</h2></div>
-    </div>
+    <div class="section-head"><div class="title-group"><span class="section-icon">01</span><h2>Research implementations</h2></div></div>
     <div class="grid-2">
-      <article class="work-card">
-        <div class="kicker">MSc thesis code</div>
-        <span class="status review">Release pending</span>
-        <h3>Learning-to-Window for Continual CT Classification</h3>
-        <p>Differentiable CT windowing, task-sequential training, and evaluation of fine-tuning, EWC, Replay, and EWC+Replay across abdominal-trauma tasks.</p>
-        <div class="chip-row">
-          <span class="chip"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-terminal"></use></svg>Python</span><span class="chip"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-flame"></use></svg>PyTorch</span><span class="chip"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-ct-scan"></use></svg>Medical imaging</span><span class="chip"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-layers"></use></svg>Continual learning</span>
-        </div>
-        <div class="links"><a href="research.html#learning-to-window">Project details →</a></div>
-      </article>
-      <article class="work-card">
-        <div class="kicker">Research implementation</div>
-        <span class="status published">Dataset repository available</span>
-        <h3>Wound Tissue Segmentation</h3>
-        <p>Implementation work supporting a comparative benchmark of 82 models across full-image, patch, and superpixel labeling formats.</p>
-        <div class="chip-row">
-          <span class="chip">Segmentation</span><span class="chip">UNet</span><span class="chip">FPN</span><span class="chip">cGAN</span>
-        </div>
-        <div class="links">
-          <a href="https://arxiv.org/abs/2502.10652" target="_blank" rel="noopener">Preprint →</a>
-          <a href="https://github.com/akabircs/WoundTissue" target="_blank" rel="noopener">Dataset repository →</a>
-        </div>
-      </article>
+      <article class="work-card featured priority-card"><div class="kicker">MSc thesis implementation</div><span class="status review">Release pending</span><h3>Learning-to-Window for Continual CT Classification</h3><p>Differentiable Hounsfield Unit preprocessing, task-sequential training, organ-specific evaluation, and controlled ablations for continual abdominal-trauma CT detection.</p><div class="chip-row"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">CT</span><span class="chip">Continual learning</span><span class="chip">Optuna</span></div><div class="links"><a href="research.html#learning-to-window">Research details →</a></div></article>
+      <article class="work-card"><div class="kicker">MICAD 2026 reproducibility</div><span class="status published">Public repository</span><h3>Abdominal-Trauma CT Continual Learning</h3><p>Code for the diagnostic MICAD study, including class-incremental and window-based domain-incremental experiments, pretrained representation experiments, and patient-level attention-MIL.</p><div class="chip-row"><span class="chip">PyTorch</span><span class="chip">EWC</span><span class="chip">Replay</span><span class="chip">LwF</span><span class="chip">Attention-MIL</span></div><div class="links"><a href="https://github.com/AsheryMbilinyi/abdominal-trauma-ct-continual-learning" target="_blank" rel="noopener">View repository →</a></div></article>
+      <article class="work-card"><div class="kicker">Research implementation</div><span class="status published">Dataset repository available</span><h3>Wound Tissue Segmentation</h3><p>Data-creation and implementation work supporting a comparative benchmark of 82 segmentation and classification models across full-image, patch, and superpixel labeling formats.</p><div class="chip-row"><span class="chip">Segmentation</span><span class="chip">UNet</span><span class="chip">FPN</span><span class="chip">cGAN</span></div><div class="links"><a href="https://arxiv.org/abs/2502.10652" target="_blank" rel="noopener">Preprint →</a><a href="https://github.com/akabircs/WoundTissue" target="_blank" rel="noopener">Dataset repository →</a></div></article>
     </div>
   </section>
 
   <section>
-    <div class="section-head">
-      <div class="title-group"><span class="section-icon">02</span><h2>Selected technical project</h2></div>
-    </div>
-    <article class="work-card featured">
-      <div class="kicker">Open-source healthcare ML</div>
-      <span class="status published">Public repository</span>
-      <h3>Diabetes Prediction</h3>
-      <p>An early applied machine-learning project for estimating diabetes risk through a web interface. The repository includes the trained model, Python inference code, and frontend templates.</p>
-      <div class="chip-row">
-        <span class="chip"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-terminal"></use></svg>Python</span><span class="chip"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-flask"></use></svg>Flask</span><span class="chip"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-code"></use></svg>PHP</span><span class="chip"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-code"></use></svg>HTML/CSS</span><span class="chip"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-grid"></use></svg>Bootstrap</span>
-      </div>
-      <div class="links"><a href="https://github.com/Nidita/Diabetes_prediction_machine_learning" target="_blank" rel="noopener">View repository on GitHub →</a></div>
-    </article>
+    <div class="section-head"><div class="title-group"><span class="section-icon">02</span><h2>Earlier technical work</h2></div></div>
+    <details class="collapse"><summary>Applied ML and software projects</summary><div class="grid-2" style="margin-top:16px;">
+      <article class="card"><h3>Diabetes Prediction</h3><p>An early applied machine-learning project for diabetes-risk prediction through a Flask-based web interface.</p><p class="mono">Python · Flask · PHP · HTML/CSS · Bootstrap</p><a class="card-link" href="https://github.com/Nidita/Diabetes_prediction_machine_learning" target="_blank" rel="noopener">Repository →</a></article>
+      <article class="card"><h3>Children Cloud</h3><p>A day-care booking and management system.</p><p class="mono">PHP · HTML · CSS · Bootstrap · MySQL · JavaScript</p><a class="card-link" href="https://github.com/Nidita/project_show" target="_blank" rel="noopener">Repository →</a></article>
+      <article class="card"><h3>Chat-Site</h3><p>A browser-based chatting application backed by MySQL.</p><p class="mono">PHP · MySQL · HTML · CSS</p><a class="card-link" href="https://github.com/Nidita/Chat" target="_blank" rel="noopener">Repository →</a></article>
+      <article class="card"><h3>Other coursework and programming</h3><p>Additional web projects, competitive-programming solutions, and software experiments remain available on GitHub without taking space from the research portfolio.</p><a class="card-link" href="https://github.com/Nidita" target="_blank" rel="noopener">GitHub profile →</a></article>
+    </div></details>
   </section>
 
-  <section>
-    <div class="section-head">
-      <div class="title-group"><span class="section-icon">03</span><h2>Earlier software projects</h2></div>
-    </div>
-    <details class="collapse" open>
-      <summary>Web applications and programming projects</summary>
-      <div class="grid-2" style="margin-top:16px;">
-        <article class="card">
-          <h3>Children Cloud</h3>
-          <p>A day-care booking and management system.</p>
-          <p class="mono">PHP · HTML · CSS · Bootstrap · MySQL · JavaScript</p>
-          <a class="card-link" href="https://github.com/Nidita/project_show" target="_blank" rel="noopener">View repository →</a>
-        </article>
-        <article class="card">
-          <h3>Chat-Site</h3>
-          <p>A browser-based chatting application backed by MySQL.</p>
-          <p class="mono">PHP · MySQL · HTML · CSS</p>
-          <a class="card-link" href="https://github.com/Nidita/Chat" target="_blank" rel="noopener">View repository →</a>
-        </article>
-        <article class="card">
-          <h3>CGPA Calculator</h3>
-          <p>A web-based GPA calculation utility.</p>
-          <p class="mono">PHP · HTML · CSS</p>
-          <a class="card-link" href="https://github.com/Nidita/cgpa-calculator" target="_blank" rel="noopener">View repository →</a>
-        </article>
-        <article class="card">
-          <h3>Recipe Website</h3>
-          <p>A recipe browsing and management website.</p>
-          <p class="mono">HTML · CSS · Bootstrap · JavaScript</p>
-          <a class="card-link" href="https://github.com/Nidita/Cuisine" target="_blank" rel="noopener">View repository →</a>
-        </article>
-      </div>
-    </details>
-  </section>
-
-  <section>
-    <div class="cta-band">
-      <h2>More code on GitHub</h2>
-      <p>My GitHub profile contains additional competitive-programming solutions, coursework, and software experiments.</p>
-      <a class="btn btn-primary" href="https://github.com/Nidita" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-github"></use></svg>Visit GitHub</a>
-    </div>
-  </section>
+  <section><div class="cta-band"><h2>Research code</h2><p>For current implementations and reproducibility material, see the research repositories above or my GitHub profile.</p><a class="btn btn-primary" href="https://github.com/Nidita" target="_blank" rel="noopener">Visit GitHub</a></div></section>
 </main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <span>© 2026 Nidita Roy · University of Victoria</span>
-    <span class="icon-row">
-      <a class="icon-link" href="mailto:niditaroy@uvic.ca"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-mail"></use></svg>Email</a>
-      <a class="icon-link" href="https://github.com/Nidita" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-github"></use></svg>GitHub</a>
-      <a class="icon-link" href="https://linkedin.com/in/nidita-roy-0537b31b0/" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-linkedin"></use></svg>LinkedIn</a>
-      <a class="icon-link" href="https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-scholar"></use></svg>Google Scholar</a>
-    </span>
-  </div>
-</footer>
+<footer class="site-footer"><div class="wrap"><span>© 2026 Nidita Roy · University of Victoria</span><span class="icon-row"><a class="icon-link" href="mailto:niditaroy@uvic.ca">Email</a><a class="icon-link" href="https://github.com/Nidita" target="_blank" rel="noopener">GitHub</a><a class="icon-link" href="https://linkedin.com/in/nidita-roy-0537b31b0/" target="_blank" rel="noopener">LinkedIn</a><a class="icon-link" href="https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></span></div></footer>
 </body>
 </html>

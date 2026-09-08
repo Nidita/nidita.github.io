@@ -4,49 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nidita Roy — Medical Image Analysis & Continual Learning</title>
-  <meta name="description" content="Nidita Roy is an MSc researcher at the University of Victoria working on continual learning, medical image analysis, CT windowing, and multimodal deep learning.">
+  <meta name="description" content="Nidita Roy is an MSc researcher at the University of Victoria working on continual and adaptive learning, medical image analysis, CT windowing, and multimodal healthcare AI.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <meta property="og:title" content="Nidita Roy — Medical Image Analysis & Continual Learning">
-  <meta property="og:description" content="MSc researcher at the University of Victoria working on continual learning, medical image analysis, CT windowing, and multimodal deep learning.">
+  <meta property="og:description" content="Research in continual and adaptive medical imaging, learnable CT preprocessing, and multimodal healthcare AI.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=10">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Nidita Roy",
     "jobTitle": "MSc Researcher in Computer Science",
-    "affiliation": {
-      "@type": "CollegeOrUniversity",
-      "name": "University of Victoria"
-    },
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Victoria"},
     "email": "mailto:niditaroy@uvic.ca",
-    "url": "https://github.com/Nidita",
     "sameAs": [
       "https://github.com/Nidita",
       "https://linkedin.com/in/nidita-roy-0537b31b0/",
       "https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en"
     ],
-    "knowsAbout": [
-      "Medical image analysis",
-      "Continual learning",
-      "Deep learning",
-      "Computer vision",
-      "Multimodal learning"
-    ]
+    "knowsAbout": ["Medical image analysis", "Continual learning", "Deep learning", "Multimodal learning", "CT windowing"]
   }
   </script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
-
 <header class="site-header">
   <div class="nav-row">
-    <a class="brand" href="index.html">
-      <svg class="brand-mark" width="22" height="22" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-brand"></use></svg>
-      Nidita Roy
-    </a>
+    <a class="brand" href="index.html"><svg class="brand-mark" width="22" height="22" viewBox="0 0 28 28" aria-hidden="true"><use href="assets/icons.svg#icon-brand"></use></svg>Nidita Roy</a>
     <nav class="primary" aria-label="Primary navigation">
       <a href="index.html" aria-current="page">Home</a>
       <a href="research.html">Research</a>
@@ -65,18 +51,18 @@
       <div>
         <span class="eyebrow">MSc Computer Science · University of Victoria</span>
         <h1>Nidita Roy</h1>
-        <p class="role">Graduate researcher in medical image analysis and continual learning</p>
-        <p class="lede">I investigate how medical-imaging models can learn new diagnostic tasks without losing previously acquired knowledge. My MSc research uses abdominal CT trauma detection to separate catastrophic forgetting from deeper problems in preprocessing, representation quality, labels, and task formulation.</p>
+        <p class="role">Medical image analysis · continual and adaptive learning · multimodal healthcare AI</p>
+        <p class="lede research-lead">I study how medical-imaging systems can adapt to new tasks and changing data without losing useful prior knowledge. My current work uses abdominal CT trauma detection to diagnose when failure comes from catastrophic forgetting and when the deeper bottleneck is preprocessing, representation quality, labels, or task formulation.</p>
         <div class="btn-row">
           <a class="btn btn-primary" href="research.html">Explore my research</a>
-          <a class="btn btn-ghost" href="publications.html">View publications</a>
-          <a class="btn btn-ghost" href="assets/Nidita_Roy_CV.pdf" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-download"></use></svg>Download CV</a>
+          <a class="btn btn-ghost" href="publications.html">Publications</a>
+          <a class="btn btn-ghost" href="assets/Nidita_Roy_CV.pdf" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-download"></use></svg>Download CV</a>
         </div>
       </div>
       <div>
         <div class="viewer-frame hero-photo">
           <div class="frame-inner">
-            <img src="assets/profile.jpeg" alt="Portrait of Nidita Roy studying at a desk" width="1400" height="1077">
+            <img src="assets/profile.jpeg" alt="Portrait of Nidita Roy" width="1400" height="1077">
             <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
           </div>
           <div class="viewer-caption"><span class="fig">FIG. 01</span><span>Nidita Roy · MSc researcher</span></div>
@@ -84,127 +70,58 @@
       </div>
     </div>
     <div class="ramp r-hero" role="img" aria-label="A grayscale CT Hounsfield Unit ramp with a highlighted window"></div>
-    <div class="ramp-label"><span>−1000 HU · air</span><span>learnable CT window</span><span>+3000 HU · dense bone</span></div>
+    <div class="ramp-label"><span>−1000 HU · air</span><span>adaptive CT window</span><span>+3000 HU · dense bone</span></div>
   </section>
 
   <section aria-label="Academic snapshot">
     <div class="snapshot">
-      <div><svg class="icon snapshot-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-scholar"></use></svg><span class="num">8.50/9.0</span><span class="lab">Cumulative MSc GPA</span></div>
-      <div><svg class="icon snapshot-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-users"></use></svg><span class="num">50+</span><span class="lab">Students supported as a CSC 111 TA</span></div>
-      <div><svg class="icon snapshot-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-certificate"></use></svg><span class="num">3 × A+</span><span class="lab">Data mining, massive datasets, medical imaging</span></div>
+      <div><svg class="icon snapshot-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-scholar"></use></svg><span class="num">8.50/9.0</span><span class="lab">Cumulative MSc GPA</span></div>
+      <div><svg class="icon snapshot-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-document"></use></svg><span class="num">MICAD 2026</span><span class="lab">Accepted continual-learning paper</span></div>
+      <div><svg class="icon snapshot-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-users"></use></svg><span class="num">50+</span><span class="lab">Students supported as a CSC 111 TA</span></div>
     </div>
   </section>
 
   <section>
-    <div class="section-head">
-      <div class="title-group"><span class="section-icon">01</span><h2>Research focus</h2></div>
-    </div>
+    <div class="section-head"><div class="title-group"><span class="section-icon">01</span><h2>Research focus</h2></div></div>
     <div class="grid-4">
-      <article class="card interest-card">
-        <div class="icon-circle"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-ct-scan"></use></svg></div><span class="k">01</span>
-        <h3>Medical Image Analysis</h3>
-        <p>Deep learning for clinically meaningful classification and segmentation in CT and radiographic imaging.</p>
-      </article>
-      <article class="card interest-card">
-        <div class="icon-circle"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-layers"></use></svg></div><span class="k">02</span>
-        <h3>Continual Learning</h3>
-        <p>Evaluating whether models retain old knowledge while acquiring new injury-detection tasks.</p>
-      </article>
-      <article class="card interest-card">
-        <div class="icon-circle"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-window"></use></svg></div><span class="k">03</span>
-        <h3>Learnable Preprocessing</h3>
-        <p>Replacing fixed CT window presets with differentiable, task-aware Hounsfield Unit adaptation.</p>
-      </article>
-      <article class="card interest-card">
-        <div class="icon-circle"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-fusion"></use></svg></div><span class="k">04</span>
-        <h3>Multimodal Learning</h3>
-        <p>Combining imaging with demographic, physiological, and structured clinical information.</p>
-      </article>
+      <article class="card interest-card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-ct-scan"></use></svg></div><span class="k">01</span><h3>Medical Image Analysis</h3><p>Deep learning for clinically meaningful classification and segmentation in CT and radiographic imaging.</p></article>
+      <article class="card interest-card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-layers"></use></svg></div><span class="k">02</span><h3>Continual &amp; Adaptive Learning</h3><p>Learning new clinical tasks while measuring retention, transfer, and task learnability.</p></article>
+      <article class="card interest-card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-window"></use></svg></div><span class="k">03</span><h3>Learnable Preprocessing</h3><p>Differentiable Hounsfield Unit transformations that replace fixed CT-window presets with trainable adaptation.</p></article>
+      <article class="card interest-card"><div class="icon-circle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-fusion"></use></svg></div><span class="k">04</span><h3>Multimodal Healthcare AI</h3><p>Combining images with demographic, physiological, and structured clinical information.</p></article>
     </div>
   </section>
 
   <section>
-    <div class="section-head">
-      <div class="title-group"><span class="section-icon">02</span><h2>Selected publications</h2></div>
-      <a class="section-tag" href="publications.html">Complete publication list →</a>
-    </div>
-    <div class="work-card featured" style="border-left:3px solid var(--signal);margin-bottom:20px;">
-      <div class="kicker">Recent Publication &nbsp;·&nbsp; 2026</div>
-      <span class="status published">Co-Lead Author &amp; Corresponding Author</span>
-      <h3 style="margin-top:8px;">What Limits Continual Learning for Abdominal-Trauma CT Detection? A Diagnostic Study of Forgetting vs. Representation Bottlenecks</h3>
-      <p>Diagnostic study benchmarking EWC, Replay, EWC+Replay, and LwF across class-incremental and domain-incremental CT task streams on the RSNA 2023 dataset — finding that representation quality, label granularity, and data scale are the binding constraints, not algorithm choice.</p>
-      <div class="links">
-        <a href="https://drive.google.com/file/d/1Q9G2xBy_uCBrMVlH6SwZ3UEdWXWPRsQ0/view?usp=sharing" target="_blank" rel="noopener">Read manuscript →</a>
-        <a href="https://github.com/AsheryMbilinyi/abdominal-trauma-ct-continual-learning" target="_blank" rel="noopener">Code →</a>
-      </div>
-    </div>
-    <div class="grid-2">
-      <article class="card">
-        <span class="status published">Published · Cancers, 2023</span>
-        <h3>Patient survival prediction using actigraphy and clinical data</h3>
-        <p>A multimodal deep-learning study that achieved 92.4% accuracy using wearable and clinical information.</p>
-        <a class="card-link" href="https://doi.org/10.3390/cancers15082232" target="_blank" rel="noopener">Open article →</a>
-      </article>
-      <article class="card">
-        <span class="status published">Published · ICCIT, 2023</span>
-        <h3>Offensive Bengali social-media meme detection</h3>
-        <p>A weighted multimodal ensemble combining visual and textual representations for hierarchical classification.</p>
-        <a class="card-link" href="https://ieeexplore.ieee.org/document/10441496/" target="_blank" rel="noopener">Open on IEEE Xplore →</a>
-      </article>
-      <article class="card">
-        <span class="status review">Preprint · 2025</span>
-        <h3>Deep learning for wound tissue segmentation</h3>
-        <p>A comparative evaluation of 82 segmentation and classification models across three labeling formats.</p>
-        <a class="card-link" href="https://arxiv.org/abs/2502.10652" target="_blank" rel="noopener">Open preprint →</a>
-      </article>
-      <article class="card">
-        <span class="status published">Accepted &amp; presented · PECCII 2026</span>
-        <h3>Spinal disease detection via deep multimodal fusion</h3>
-        <p>Lead-author BSc thesis work combining X-ray imagery and demographic features across eight spine conditions. The camera-ready manuscript is available while the formal proceedings record is pending.</p>
-        <div class="links compact-links"><a href="https://drive.google.com/drive/folders/12LjoJQtA8pEblI3PI1-BeRFlxQKf9A7Q" target="_blank" rel="noopener">View camera-ready manuscript →</a><a href="https://www.peccii.pust.ac.bd/" target="_blank" rel="noopener">Conference site ↗</a></div>
-      </article>
+    <div class="section-head"><div class="title-group"><span class="section-icon">02</span><h2>Current research</h2></div><a class="section-tag" href="research.html">Research details →</a></div>
+    <article class="work-card featured priority-card">
+      <div class="kicker">MSc thesis · manuscript under review</div>
+      <span class="status review">Current work</span>
+      <h3>Learning to Window: Context-Aware HU Adaptation for Continual Trauma Injury Detection in CT Scans</h3>
+      <p>This project studies whether task-adaptive CT preprocessing improves continual trauma detection beyond standard fixed-window baselines. It combines differentiable CT windowing with sequential organ-level learning and targeted ablations that separate the effect of window initialization, smooth intensity transforms, learnability, and continual-learning strategy.</p>
+      <div class="links"><a href="research.html#learning-to-window">Project details →</a><a href="projects.html">Implementation →</a></div>
+    </article>
+  </section>
+
+  <section>
+    <div class="section-head"><div class="title-group"><span class="section-icon">03</span><h2>Selected research outputs</h2></div><a class="section-tag" href="publications.html">Complete publication list →</a></div>
+    <div class="grid-3">
+      <article class="card"><span class="status published">Accepted · MICAD 2026</span><h3>What Limits Continual Learning for Abdominal-Trauma CT Detection?</h3><p>Co-lead and corresponding-author diagnostic study of forgetting versus representation and label bottlenecks.</p><a class="card-link" href="https://github.com/AsheryMbilinyi/abdominal-trauma-ct-continual-learning" target="_blank" rel="noopener">Paper code →</a></article>
+      <article class="card"><span class="status published">Published · IEEE · 2026</span><h3>Spinal Disease Detection via Deep Multimodal Fusion</h3><p>Lead-author multimodal study combining X-ray imagery with demographic features for spinal-disease classification.</p><a class="card-link" href="https://ieeexplore.ieee.org/abstract/document/11662047" target="_blank" rel="noopener">IEEE Xplore →</a></article>
+      <article class="card"><span class="status published">Published · Cancers · 2023</span><h3>Patient survival prediction using actigraphy and clinical data</h3><p>Multimodal deep learning using wearable activity and clinical information for survival-outcome prediction.</p><a class="card-link" href="https://doi.org/10.3390/cancers15082232" target="_blank" rel="noopener">Open article →</a></article>
     </div>
   </section>
 
   <section>
-    <div class="section-head">
-      <div class="title-group"><span class="section-icon">03</span><h2>Education and preparation</h2></div>
-    </div>
+    <div class="section-head"><div class="title-group"><span class="section-icon">04</span><h2>Education</h2></div></div>
     <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-date">2025–present</div>
-        <div><h3>MSc in Computer Science, University of Victoria</h3><p>Preliminary thesis: <em>Continual Learning for Abdominal Trauma Detection in CT: A Task-Incremental Study of Forgetting, Windowing, and Learnability</em>.</p></div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">Graduate courses</div>
-        <div><p><strong>CSC 502</strong> Systems for Massive Datasets (97% A+); <strong>CSC 503</strong> Data Mining (93% A+); <strong>CSC 581B</strong> Deep Learning for Medical Image Analysis (92% A+); <strong>CSC 581C</strong> Online Learning (81% A−); <strong>CSC 595</strong> completed.</p></div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">Supervision</div>
-        <div><p>Supervisor: <a href="https://www.uvic.ca/ecs/computerscience/people/faculty/profiles/mbilinyi-ashery.php" target="_blank" rel="noopener">Dr. Ashery Mbilinyi</a>. Committee member: <a href="https://www.uvic.ca/ecs/computerscience/people/faculty/profiles/champati-jaya.php" target="_blank" rel="noopener">Dr. Jaya Prakash Champati</a>.</p></div>
-      </div>
+      <div class="timeline-item"><div class="timeline-date">2025–present</div><div><h3>MSc in Computer Science, University of Victoria</h3><p>Research in continual medical imaging under the supervision of Dr. Ashery Mbilinyi. Cumulative GPA: 8.50/9.0.</p></div></div>
+      <div class="timeline-item"><div class="timeline-date">Graduate preparation</div><div><p><strong>CSC 502</strong> Systems for Massive Datasets (97% A+); <strong>CSC 503</strong> Data Mining (93% A+); <strong>CSC 581B</strong> Deep Learning for Medical Image Analysis (92% A+); <strong>CSC 581C</strong> Online Learning (81% A−).</p></div></div>
     </div>
   </section>
 
-  <section>
-    <div class="cta-band">
-      <h2>Interested in reliable and adaptive medical AI?</h2>
-      <p>I welcome conversations about PhD opportunities, research collaborations, and projects in continual learning, medical computer vision, and multimodal healthcare AI.</p>
-      <a class="btn btn-primary" href="contact.html">Get in touch</a>
-    </div>
-  </section>
+  <section><div class="cta-band"><h2>PhD opportunities and research collaboration</h2><p>I am interested in research on reliable and adaptive medical AI, especially continual learning, medical computer vision, multimodal learning, and learning from heterogeneous clinical data.</p><a class="btn btn-primary" href="contact.html">Get in touch</a></div></section>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <span>© 2026 Nidita Roy · University of Victoria</span>
-    <span class="icon-row">
-      <a class="icon-link" href="mailto:niditaroy@uvic.ca"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-mail"></use></svg>Email</a>
-      <a class="icon-link" href="https://github.com/Nidita" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-github"></use></svg>GitHub</a>
-      <a class="icon-link" href="https://linkedin.com/in/nidita-roy-0537b31b0/" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-linkedin"></use></svg>LinkedIn</a>
-      <a class="icon-link" href="https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en" target="_blank" rel="noopener"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="assets/icons.svg#icon-scholar"></use></svg>Google Scholar</a>
-    </span>
-  </div>
-</footer>
+<footer class="site-footer"><div class="wrap"><span>© 2026 Nidita Roy · University of Victoria</span><span class="icon-row"><a class="icon-link" href="mailto:niditaroy@uvic.ca"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-mail"></use></svg>Email</a><a class="icon-link" href="https://github.com/Nidita" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-github"></use></svg>GitHub</a><a class="icon-link" href="https://linkedin.com/in/nidita-roy-0537b31b0/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-linkedin"></use></svg>LinkedIn</a><a class="icon-link" href="https://scholar.google.com/citations?user=JVPYWQsAAAAJ&hl=en" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-scholar"></use></svg>Google Scholar</a></span></div></footer>
 </body>
 </html>

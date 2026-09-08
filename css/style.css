@@ -386,7 +386,7 @@ dd a[target='_blank']::after {
   vertical-align: 1px;
 }
 
-.snapshot { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; padding: 27px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.snapshot { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; padding: 27px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .snapshot > div { display: flex; flex-direction: column; gap: 5px; }
 .snapshot-icon { width: 18px; height: 18px; color: var(--signal-ink); stroke-width: 1.5; }
 .snapshot .num { display: block; color: var(--ink); font-family: var(--font-display); font-size: 1.5rem; }
@@ -510,4 +510,14 @@ details.collapse[open] summary { color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+/* Portfolio-focused additions */
+.compact-list { margin: 0; padding-left: 1.15rem; color: var(--ink-soft); }
+.compact-list li { margin: 0.38rem 0; }
+.research-lead { max-width: 820px; }
+.priority-card { border-left: 3px solid var(--signal); }
+.mini-meta { margin-top: 8px; color: var(--scan-mid); font-family: var(--font-mono); font-size: 0.72rem; }
+@media (max-width: 720px) {
+  .snapshot { grid-template-columns: 1fr; }
 }
